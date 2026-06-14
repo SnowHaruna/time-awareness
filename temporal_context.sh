@@ -1,11 +1,14 @@
 #!/bin/bash
-# 时间差系统 — temporal_context v1.1
+# 时间差系统 — temporal_context v1.2
 # 用法: bash temporal_context.sh
-# 输出: 🕐 北京时间 HH:MM CST | 用户活跃度:[等级]
+# 输出: 🕐 北京时间 YYYY-MM-DD HH:MM CST | 用户活跃度:[等级]
 #
 # 活跃度时钟分6档，数据来源：打字行为指纹实测（709条消息统计）
 # 可替换为用户自己的统计数据
+#
+# v1.2 新增：日期标签（跨天锚点，纯标签不参与活跃度计算）
 
+D=$(date +%Y-%m-%d)
 H=$(date +%H)
 M=$(date +%M)
 
@@ -25,4 +28,4 @@ else
     LVL="中"
 fi
 
-echo "🕐 北京时间 $H:$M CST | 用户活跃度:$LVL"
+echo "🕐 北京时间 $D $H:$M CST | 用户活跃度:$LVL"
