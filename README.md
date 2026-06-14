@@ -1,11 +1,11 @@
-# ⏱ Time Awareness — AI 时间差系统
+# ⏱ Time Awareness — AI 时间差系统 v1.2
 
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Bash](https://img.shields.io/badge/bash-5.0%2B-green)]()
 
-让 AI Agent 拥有「现在几点、用户在不在」的时间感知能力。
+让 AI Agent 拥有「现在几点、今天几号、用户在不在」的时间感知能力。
 
-**核心理念**：AI 的每轮对话都应该知道当前时间，以及用户在这个时段的行为特征。不用改模型、不用改记忆系统——只加一个薄层。
+**核心理念**：AI 的每轮对话都应该知道当前时间和日期，以及用户在这个时段的行为特征。不用改模型、不用改记忆系统——只加一个薄层。
 
 ---
 
@@ -13,7 +13,7 @@
 
 ```bash
 bash temporal_context.sh
-# 输出: 🕐 北京时间 11:15 CST | 用户活跃度:低
+# 输出: 🕐 北京时间 2026-06-14 11:15 CST | 用户活跃度:低
 ```
 
 将输出注入 AI Agent 的 system prompt 或对话上下文即可。
@@ -42,7 +42,7 @@ bash temporal_context.sh
     ▼
 temporal_context.sh（bash 零依赖）
     │  查系统时间 → 映射活跃度时钟
-    │  输出: 🕐 HH:MM | 活跃度:等级
+    │  输出: 🕐 YYYY-MM-DD HH:MM | 活跃度:等级
     │
     ▼
 注入 AI 对话上下文
