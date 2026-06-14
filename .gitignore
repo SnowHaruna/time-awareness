@@ -1,0 +1,14 @@
+# 报告文档（本地保留）
+reports/
+
+# 临时文件
+*.bak
+*.swp
+*~
+__pycache__/
+.vscode/
+.idea/
+
+# 个人信息（本地配置）
+.env
+secrets/
