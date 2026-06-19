@@ -12,3 +12,8 @@ __pycache__/
 # 个人信息（本地配置）
 .env
 secrets/
+
+# 额外排除
+.DS_Store
+*.log
+*.tmp
